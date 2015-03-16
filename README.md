@@ -1,14 +1,10 @@
-This is your new Play application
+Camel + Kafka + Akka example in Play
 =================================
-
-This file will be packaged with your application, when using `activator dist`.
-
-## Using Docker
 
 ### Creating docker image
 
 ```shell
-docker:publishLocal
+sbt docker:publishLocal
 ```
 or, to publish images to docker.io:
 
