@@ -2,3 +2,25 @@ This is your new Play application
 =================================
 
 This file will be packaged with your application, when using `activator dist`.
+
+## Using Docker
+
+### Creating docker image
+
+```shell
+docker:publishLocal
+```
+
+or, to publish images to docker.io:
+
+```shell
+# will need to do docker login first
+docker:publish
+```
+
+
+### Running containers
+
+```
+docker run --rm=true -p 9000:9000 ccuddigan/camel-scala:0.1
+```
