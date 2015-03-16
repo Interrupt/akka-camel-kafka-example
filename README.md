@@ -20,7 +20,7 @@ docker:publish
 docker run -d --name zookeeper jplock/zookeeper:3.4.6
 docker run -d --name kafka --link zookeeper:zookeeper ches/kafka
 
-#Make the new Kafka topic
+# Make the new Kafka topic
 ZK_IP=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' zookeeper)
 docker run --rm ches/kafka kafka-topics.sh --create --topic test --replication-factor 1 --partitions 1 --zookeeper $ZK_IP:2181
 
